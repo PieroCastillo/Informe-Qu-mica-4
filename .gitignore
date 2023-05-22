@@ -10,3 +10,6 @@ sections/temp/
 *.toc
 *.bbl
 *.synctex.gz
+*.fls
+*.fdb_latexmk
+*.blg
