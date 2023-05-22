@@ -8,3 +8,5 @@ sections/temp/
 *.synctex(busy)
 *.pdf
 *.toc
+*.bbl
+*.synctex.gz
