@@ -1,13 +1,35 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \subsection{Experimento 1}
+Primero obtenemos el volumen del $H_2$.
+Usando:
+\begin{equation} \label{pressure_eq}
+    P_{atm} = P_{H_2} + P_{Columna \, de \, H_2O}
+\end{equation}
+Reemplazando en \ref{pressure_eq}:
+\[ 10.33mH_2O = P_{H_2} + 0.079mH_2O \]
+\[ P_{H_2} = 10.251mH_2O \]
+Ahora usamos la Ley general de los gases:
+\begin{equation} \label{gas_eq}
+    \frac{P_1 \cdot V_1}{T_1} = \frac{P_{CN} \cdot V_{CN}}{T_{CN}}
+\end{equation}
+Reemplazando en \ref{gas_eq0:}
+\[
+    \frac{10.251 \, mH_2O \cdot 24 \, mL}{295 \, K} =
+    \frac{10.33 \, mH_2O \cdot V_{CN}}{273 \, K}
+\]
+\[ V_{CN} = 22.04 \, mL\]
+En segundo lugar, debemos hallar el #moles $(\eta)$ del $H_2$.
+Usando la reacción:
+\[ Mg \, + \, HCl \rightarrow \, H_2 \, + \, MgCl_2 \]
 
 \subsection{Experimento 2}
 
 Usando la ley de Graham \ref{diffusion_eq}:
 \begin{equation}
     \frac{v_{gas\, 1}}{v_{gas\, 2}} =
-    \sqrt{\frac{M_{gas\, 2}}{M_{gas\, 1}}} 
+    \sqrt{\frac{M_{gas\, 2}}{M_{gas\, 1}}} =
+    coeficiente \, de \, difusi\acute{o}n \, de \, Graham
 \end{equation}
 \[
     \frac{\frac{l_{gas\, 1}}{\Delta t_1}}{\frac{l_{gas\, 2}}{\Delta t_2}} =
@@ -16,36 +38,35 @@ Usando la ley de Graham \ref{diffusion_eq}:
 Pero dado que los tiempos $t_1$ y $t_2$ son iguales:
 \[
     \frac{l_{gas\, 1}}{l_{gas\, 2}} =
-    \sqrt{\frac{M_{gas\, 2}}{M_{gas\, 1}}} 
+    \sqrt{\frac{M_{gas\, 2}}{M_{gas\, 1}}} =
+    \Lambda
 \]
 Sabiendo que:
 \begin{itemize}
     \item $\overline{M}_{NH_3}$ = 17 $g/mol$
     \item $\overline{M}_{HCl}$  = 36.5 $g/mol$
 \end{itemize}
-Reemplazando para obtener $l_{HCl}$:
+Reemplazando las masas molares para obtener $\Lambda_{te\acute{o}rico}$:
 \[
-    \frac{18.48 cm}{l_{HCl}} =
-    \sqrt{\frac{36.5}{17}} 
+    \sqrt{\frac{M_{HCl}}{M_{NH_3}}} =
+    \Lambda_{te\acute{o}rico}
 \]
-\[ l_{HCl} \approx 12.6 \, cm\]
-Mientras que si realizamos los mismo para $l_{NH_3}$:
 \[
-    \frac{l_{NH_3}}{12 \, cm} =
-    \sqrt{\frac{36.5}{17}} 
+    \sqrt{\frac{36.5}{17}} =
+    \Lambda_{te\acute{o}rico}
 \]
-\[ l_{HCl} \approx 17.6 \, cm\]
-Ahora calculamos los porcentajes de aproximación
-para ambos casos:
-\begin{itemize}
-    \item Para el $l_{HCl}$:
-    \[ \% \; aproximaci\acute{o}n = \frac{12 \, cm}{12.6 \, cm} \cdot 100\%\]
-    \[ \% \; aproximaci\acute{o}n = 95.23\%\]
-    \item Para el $l_{NH_3}$:
-    \[ \% \; aproximaci\acute{o}n = \frac{18.48 \, cm}{17.6 \, cm} \cdot 100\%\]
-    \[ \% \; aproximaci\acute{o}n = 105\%\]
-    Ajustando:
-    \[ \% \; aproximaci\acute{o}n_{exceso} = 95\%\]
-\end{itemize}
+\[ \Lambda_{te\acute{o}rico} \approx 1.465 \]
+Mientras que si realizamos los mismo para las longitudes recorridad, así 
+obteniendo el $\Lambda_{real}$:
+\[
+    \frac{18.48 \, cm}{12 \, cm} =
+    \Lambda_{real}
+\]
+\[ \Lambda_{real} = 1.54\]
+Ahora calculamos el porcentaje de aproximación:
+\[ \% \; aproximaci\acute{o}n = \frac{1.54}{1.465} \cdot 100\%\]    
+\[ \% \; aproximaci\acute{o}n = 105.1\%\]
+Ajustando:
+\[ \% \; aproximaci\acute{o}n_{exceso} = 94.9\%\]
 
 \end{document}
