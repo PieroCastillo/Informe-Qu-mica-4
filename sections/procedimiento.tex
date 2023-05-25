@@ -1,9 +1,79 @@
 \documentclass[../main.tex]{subfiles}
 \usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, shadows}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup[table]{name = tabla}
 
 \begin{document}
-\subsection{Experimento 1}
-
-\subsection{Experimento 2}
-
+\begin{itemize}
+    \item Experimento 1:
+    \begin{figure}[H]
+        \tikzstyle{azul}=[rectangle, draw=black, rounded corners, fill=blue!40, drop shadow, text centered, anchor=north, text=black, text width=3cm]
+    
+        \tikzstyle{rojo}=[rectangle, draw=black, rounded corners, fill=red!40, drop shadow, text centered, anchor=north, text=black, text width=3cm]
+    
+        \tikzstyle{verde}=[rectangle, draw=black, rounded corners, fill=green!60, drop shadow, text centered, anchor=north, text=black, text width=2cm]
+    
+        \tikzstyle{amarillo}=[rectangle, draw=black, rounded corners, fill=yellow!60, drop shadow, text centered, anchor=north, text=black, text width=4cm]
+        
+        \tikzstyle{linea}=[-]
+        
+        \centering
+        \begin{tikzpicture}[align=center, node distance=2cm]
+        
+        \node (title1) [azul]{Volumen molar del hidrógeno};
+    
+        \node (clase1) [rojo, below left=1cm and 1.0cm of title1]{Se determinó el volumen muerto de una bureta de 25 ml};
+    
+        \node (clase2) [rojo, below right=1cm and 1.0cm of title1]{Se colocó cinta de magnesio en un corcho para tapar la bureta};
+    
+        \draw[linea] (title1.south) -| (clase1.north); 
+        \draw[linea] (title1.south) -| (clase2.north); 
+    
+        \node (clase3) [amarillo, below=4cm of title1]{Se agregó en la bureta 10 ml de HCL 6M + agua destilada};
+    
+        \node (clase4) [amarillo, below=6cm of title1]{Se introdujo en un vaso de 250ml que contiene agua de caño};
+    
+        \draw[linea] (clase1.south) |- (clase3.west); 
+        \draw[linea] (clase2.south) |- (clase3.east); 
+        \draw[linea] (clase3.south) -- (clase4.north); 
+        \end{tikzpicture}
+        
+        \caption{Volumen molar del hidrogeno}
+        \label{fig:my_label}
+    \end{figure}
+    \item Experimento 2:
+    \begin{figure}[H]
+        \tikzstyle{azul}=[rectangle, draw=black, rounded corners, fill=blue!40, drop shadow, text centered, anchor=north, text=black, text width=3cm]
+    
+        \tikzstyle{rojo}=[rectangle, draw=black, rounded corners, fill=red!40, drop shadow, text centered, anchor=north, text=black, text width=3cm]
+    
+        \tikzstyle{verde}=[rectangle, draw=black, rounded corners, fill=green!60, drop shadow, text centered, anchor=north, text=black, text width=2cm]
+    
+        \tikzstyle{amarillo}=[rectangle, draw=black, rounded corners, fill=yellow!60, drop shadow, text centered, anchor=north, text=black, text width=4cm]
+        
+        \tikzstyle{linea}=[-]
+        
+        \centering
+        \begin{tikzpicture}[align=center, node distance=2cm]
+        
+        \node (title1) [azul]{Estudio de la Ley de difusión de Graham};
+        
+        \node (clase1) [amarillo, below=1cm of title1]{Tubo de vidrio limpio y seco de 25cm aprox};
+    
+        \node (clase2) [amarillo, below=1cm of clase1]{En los extremos del tubo se colocó simultaneamente dos algodones de NH3(ac) 15 M y de HCL 12 M.};
+    
+        \node (clase3) [amarillo, below=1cm of clase2]{Se formó un aro blanco de cloruro de amonio};
+        
+        \draw[linea] (title1.south) -- (clase1.north); 
+        \draw[linea] (clase1.south) |- (clase2.north);
+        \draw[linea] (clase2.south) |- (clase3.north);
+        \end{tikzpicture}
+        
+        \caption{Estudio de la Ley de difusión de Graham}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
 \end{document}
