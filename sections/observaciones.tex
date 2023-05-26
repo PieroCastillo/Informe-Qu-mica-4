@@ -5,9 +5,49 @@
 \usepackage{array}
 \usepackage{tabularx}
 
-\begin{document}
-\subsection{Experimento 1}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, shadows}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup[table]{name = tabla}
 
-\subsection{Experimento 2}
+\begin{document}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Temperatura & 22°C \\
+        \hline
+        Presion atmosferica & 10.33 mm $H_2O$ \\
+        \hline
+        Volumen del gas recogido & 24 ml \\
+        \hline
+        Altura de la columna de agua & 7.9 cm \\
+        \hline
+        Longitud de la cinta de Mg & 3.3 cm \\
+        \hline
+        Volumen de HCL & 60ml \\
+        \hline
+        Concentracion molar de HCL & 6 M \\
+        \hline
+    \end{tabular}
+    \caption{Experimento del volumen molar del hidrógeno}
+    \label{tab:my_label}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Longitud precisa del tubo de Graham & 30.48 cm \\
+        \hline
+        Distancia recorrida por el NH3 & 18.48cm \\
+        \hline
+        Distancia recorrida por el HCL & 12cm \\
+        \hline
+    \end{tabular}
+    \caption{Experimento de la Ley de difusión de Graham}
+    \label{tab:my_label}
+\end{table}
 
 \end{document}
